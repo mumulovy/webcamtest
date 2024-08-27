@@ -6,8 +6,14 @@ import av
 
 st.title("OpenCV Filters on Video Stream")
 
-filter = "none"
 
+webrtc_streamer(key="sample")
+
+
+
+
+
+filter = "none"
 
 def transform(frame: av.VideoFrame):
     img = frame.to_ndarray(format="bgr24")
@@ -54,7 +60,7 @@ with col6:
     if st.button("Invert"):
         filter = "invert"
 
-
+'''
 webrtc_streamer(
     #key="streamer",
     key="example",
@@ -63,3 +69,4 @@ webrtc_streamer(
     media_stream_constraints={"video": True, "audio": False},
     async_processing=True,
     )
+'''

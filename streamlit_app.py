@@ -58,5 +58,6 @@ with col6:
 webrtc_streamer(
     key="streamer",
     video_frame_callback=transform,
-    sendback_audio=False
+    #sendback_audio=False
+    media_stream_constraints={"video": True, "audio": False}
     )
